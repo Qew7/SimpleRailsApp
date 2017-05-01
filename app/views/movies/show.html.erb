@@ -1,30 +1,41 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <h1><%= @movie.title %></h1>
+  </div>
+  <div class="col-md-offset-5">
+    <%= link_to 'Изменить', edit_movie_path(@movie) %> |
+    <%= link_to 'Назад', movies_path %>
+  </div>
+</div> 
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @movie.poster.url(:medium),style: "height: 400px; width: 250px;"%>
+  </div>
+  <div class="movie-data">
+    <p>
+      <strong>Название:</strong>
+      <%= @movie.title %>
+    </p>
 
-<p>
-  <strong>Название:</strong>
-  <%= @movie.title %>
-</p>
+    <p>
+      <strong>Длительность:</strong>
+      <%= @movie.duration %>
+    </p>
 
-<%= image_tag @movie.poster.url(:medium) %>
+    <p>
+      <strong>Режиссёр:</strong>
+      <%= @movie.director %>
+    </p>
 
-<p>
-  <strong>Длительность:</strong>
-  <%= @movie.duration %>
-</p>
+    <p>
+      <strong>Рейтинг:</strong>
+      <%= @movie.rating %>
+    </p>
 
-<p>
-  <strong>Режиссёр:</strong>
-  <%= @movie.director %>
-</p>
-
-<p>
-  <strong>Рейтинг:</strong>
-  <%= @movie.rating %>
-</p>
-
-<p>
-  <strong>Описание:</strong>
-  <%= @movie.description %>
-</p>
-<%= link_to 'Изменить', edit_movie_path(@movie) %> |
-<%= link_to 'Назад', movies_path %>
+    <p>
+      <strong>Описание:</strong>
+      <%= @movie.description %>
+    </p>
+  </div>
+</div>
