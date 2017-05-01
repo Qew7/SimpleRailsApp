@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Film Buff</title>
+    <title>Кинотека</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,8 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <%= render 'layouts/sidebar' %>
+    <div class="container" style="padding-top: 60px; padding-left: 200px">
         <% flash.each do |name, msg| %>
             <%= content_tag(:div, msg, class: "alert alert-info") %>
         <% end %>

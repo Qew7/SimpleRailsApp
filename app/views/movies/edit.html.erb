@@ -1,7 +1,7 @@
-<h1>Editing Movie</h1>
+<h1>Редактирование фильма</h1>
 
 <%= render 'form', movie: @movie %>
 
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %>
-<%= link_to 'Destroy', @movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Инфо', @movie %> |
+<%= link_to 'Назад', movies_path %> |
+<%= link_to 'Удалить', @movie, method: :delete, data: { confirm: 'Вы уверены?' } %>

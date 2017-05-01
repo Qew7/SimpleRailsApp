@@ -1,30 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Название:</strong>
   <%= @movie.title %>
 </p>
 
 <%= image_tag @movie.poster.url(:medium) %>
 
 <p>
-  <strong>Duration:</strong>
+  <strong>Длительность:</strong>
   <%= @movie.duration %>
 </p>
 
 <p>
-  <strong>Director:</strong>
+  <strong>Режиссёр:</strong>
   <%= @movie.director %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
+  <strong>Рейтинг:</strong>
   <%= @movie.rating %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Описание:</strong>
   <%= @movie.description %>
 </p>
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Изменить', edit_movie_path(@movie) %> |
+<%= link_to 'Назад', movies_path %>

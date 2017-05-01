@@ -1,16 +1,18 @@
-<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-  <%= link_to "Movie Reviews", root_path, class: "navbar-brand" %>
-  <ul class="nav navbar-nav">
+<header class="main-header" style="position: fixed; width: 100%; background-color: black; z-index: 10 ">
 
-    <li class="nav-item active">
-      <a class="nav-link" href="movies/new">New Movie <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-  </ul>
-  <form class="form-inline pull-xs-right">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-success-outline" type="submit">Search</button>
-  </form>
-</nav>
+    <%= link_to "Обзоры", root_path, class: "navbar-brand", style: "padding-left:7px"%>
+
+    <nav class="navbar navbar-static-top" role="navigation" style="float: right;">
+
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li style="float: left;">
+                <form class="form-inline pull-xs-right">
+                    <input class="form-control" type="text" placeholder="Название фильма">
+                    <button class="btn btn-success-outline" type="submit">Поиск</button>
+                </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

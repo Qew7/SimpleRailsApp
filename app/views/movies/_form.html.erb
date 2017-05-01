@@ -1,7 +1,7 @@
 <%= form_with(model: movie, html: { multipart: true }) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+      <h2><%= pluralize(movie.errors.count, "error") %> попрепятствовало сохранению фильма:</h2>
 
       <ul>
       <% movie.errors.full_messages.each do |message| %>
@@ -11,37 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
+  <div class="form-group">
+    <%= form.label :Название %>
     <%= form.text_field :title, id: :movie_title %>
   </div>
 
-  <div class="field">
-    <%= form.label :duration %>
+  <div class="form-group">
+    <%= form.label :Длительность %>
     <%= form.text_field :duration, id: :movie_duration %>
   </div>
 
-  <div class="field">
-    <%= form.label :director %>
+  <div class="form-group">
+    <%= form.label :Режисёр %>
     <%= form.text_field :director, id: :movie_director %>
   </div>
 
-  <div class="field">
-    <%= form.label :rating %>
+  <div class="form-group">
+    <%= form.label :Рейтинг %>
     <%= form.text_field :rating, id: :movie_rating %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
+  <div class="form-group">
+    <%= form.label :Описание %>
     <%= form.text_area :description, id: :movie_description %>
   </div>
 
-  <div class="field">
-    <%= form.label :poster %>
+  <div class="form-group">
+    <%= form.label :Постер %>
     <%= form.file_field :poster %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit class: "btn btn-info"%>
+
 <% end %>
