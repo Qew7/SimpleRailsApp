@@ -14,5 +14,36 @@
  *= require_self
  */
 
+ @import "movies";
  @import "bootstrap";
  @import "tether";
+
+
+.main-container {
+	padding-top: 80px;
+	padding-left: 220px;
+	padding-right: 20px; 
+}
+
+.navbar-fixed-left {
+	float: left; 
+	min-height: 100%; 
+	position: fixed; 
+	padding-top: 60px; 
+	width: 200px;
+}
+
+.main-header {
+	position: fixed; 
+	width: 100%; 
+	background-color: black; 
+	z-index: 10;
+}
+
+.navbar-brand {
+	padding-left:7px;
+}
+
+.navbar-static-top {
+	float: right;
+}

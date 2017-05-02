@@ -1,5 +1,12 @@
 <h1>Новый фильм</h1>
 
-<%= render 'form', movie: @movie %>
+
+<div class="row">
+	<div class="col-md-4">
+		<%= render 'form', movie: @movie %>
+	</div>
+	<div class="col" id="poster-prev">
+	</div>
+</div>
 
 <%= link_to 'Назад', movies_path %>

@@ -12,33 +12,33 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :Название %>
-    <%= form.text_field :title, id: :movie_title %>
+    <%= form.label :Название, for: :movie_title%>
+    <%= form.text_field :title, id: :movie_title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Длительность %>
-    <%= form.text_field :duration, id: :movie_duration %>
+    <%= form.label :Длительность, for: :movie_duration %>
+    <%= form.text_field :duration, id: :movie_duration, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Режисёр %>
-    <%= form.text_field :director, id: :movie_director %>
+    <%= form.label :Режисёр, for: :movie_director %>
+    <%= form.text_field :director, id: :movie_director, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Рейтинг %>
-    <%= form.text_field :rating, id: :movie_rating %>
+    <%= form.label :Рейтинг, for: :movie_rating %>
+    <%= form.text_field :rating, id: :movie_rating, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Описание %>
-    <%= form.text_area :description, id: :movie_description %>
+    <%= form.label :Описание, for: :movie_description %>
+    <%= form.text_area :description, id: :movie_description, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Постер %>
-    <%= form.file_field :poster %>
+    <%= form.label :Постер, for: :poster %>
+    <%= form.file_field :poster, id: :posterField%>
   </div>
 
   <%= form.submit class: "btn btn-info"%>

@@ -1,7 +1,13 @@
 <h1>Редактирование фильма</h1>
 
-<%= render 'form', movie: @movie %>
-
+<div class="row">
+	<div class="col-md-4">
+		<%= render 'form', movie: @movie %>
+	</div>
+	<div class="col" id="poster-prev">
+		<%= image_tag @movie.poster.url(:medium), class: "poster-big"%>
+	</div>
+</div>
 <%= link_to 'Инфо', @movie %> |
 <%= link_to 'Назад', movies_path %> |
 <%= link_to 'Удалить', @movie, method: :delete, data: { confirm: 'Вы уверены?' } %>

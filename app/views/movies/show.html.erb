@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-md-6">
     <h1><%= @movie.title %></h1>
@@ -9,10 +8,10 @@
   </div>
 </div> 
 <div class="row">
-  <div class="col-md-4">
-    <%= image_tag @movie.poster.url(:medium),style: "height: 400px; width: 250px;"%>
+  <div class="col-md-4 poster-frame">
+    <%= image_tag @movie.poster.url(:medium), class: "poster-big"%>
   </div>
-  <div class="movie-data">
+  <div class="col movie-data">
     <p>
       <strong>Название:</strong>
       <%= @movie.title %>
@@ -35,7 +34,7 @@
 
     <p>
       <strong>Описание:</strong>
-      <%= @movie.description %>
+      <p class="movie-description"><%= @movie.description %></p>
     </p>
   </div>
 </div>

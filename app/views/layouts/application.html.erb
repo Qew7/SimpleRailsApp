@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Кинотека</title>
+    <title>Нетленочки</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -10,9 +10,9 @@
   <body>
     <%= render 'layouts/header' %>
     <%= render 'layouts/sidebar' %>
-    <div class="container" style="padding-top: 60px; padding-left: 200px">
+    <div class="main-container">
         <% flash.each do |name, msg| %>
-            <%= content_tag(:div, msg, class: "alert alert-info") %>
+            <%= content_tag(:div, msg, class: "alert alert-success") %>
         <% end %>
         <%= yield %>
     </div>
