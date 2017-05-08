@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails', '~> 4.3.1'
 gem 'tether-rails'
+gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'erubis'
+
 
 gem "paperclip", "~> 5.0.0.beta1"
 
@@ -35,7 +38,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
