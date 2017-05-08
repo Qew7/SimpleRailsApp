@@ -2,11 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/*/
 
-$(function() {
-  $('#posterField').on('change', function(event) {
+$(document.addEventListener("turbolinks:load", function() {
+  $('#poster_field').on('change', function(event) {
     var files = event.target.files;
     var image = files[0];
-    // here's the file size
     console.log(image.size);
     var reader = new FileReader();
     reader.onload = function(file) {
@@ -19,4 +18,4 @@ $(function() {
     reader.readAsDataURL(image);
     console.log(files);
   });
-});
+}));
