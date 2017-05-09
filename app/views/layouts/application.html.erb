@@ -8,13 +8,19 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/sidebar' %>
-    <div class="main-container">
-        <% flash.each do |name, msg| %>
-            <%= content_tag(:div, msg, class: "alert alert-success") %>
-        <% end %>
-        <%= yield %>
-    </div>
+  <div class="site-container">
+	<% if user_signed_in? || request.original_url == new_user_registration_url%>	
+	    <%= render 'layouts/header' %>
+	    <%= render 'layouts/sidebar' %>
+	    <div class="main-container">
+	        <% flash.each do |name, msg| %>
+	            <%= content_tag(:div, msg, class: "alert alert-success") %>
+	        <% end %>
+	        <%= yield %>
+	    </div>
+	<% else %>
+		<%= render 'users/sign-in' %>	
+	<% end %>
+  </div>		    
   </body>
 </html>

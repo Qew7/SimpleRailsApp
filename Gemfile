@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails', '~> 4.3.1'
 gem 'tether-rails'
+
+gem 'rails-i18n', '~> 5.0.0'
+
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
 gem 'erubis'
 
