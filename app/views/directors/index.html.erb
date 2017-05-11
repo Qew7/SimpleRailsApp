@@ -1,0 +1,21 @@
+<div class="row">
+  <% @directors.each do |director| %>
+    <div class="col-sm-6 col-md-2 director-tile">
+        <div class="thumbnail">
+          <%= link_to (image_tag director.photo.url(:thumb), class: 'image', alt: director.name+" "+director.second_name, title: director.name+" "+director.second_name), director%>
+        </div>
+        <div class="row director-prev-data">
+          <div class="name col-7" title="<%= director.name %>">
+            <%= director.name %>
+          </div>
+          <div class="second_name col-7" title="<%= director.second_name %>">
+            <%= director.second_name %>
+          </div>
+          <div class="third_name col-7" title="<%= director.third_name %>">
+            <%= director.third_name %>
+          </div>
+        </div>
+        <hr/>
+    </div>
+  <% end %>
+</div>

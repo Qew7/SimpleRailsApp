@@ -1,0 +1,21 @@
+<div class="row">
+  <% @actors.each do |actor| %>
+    <div class="col-sm-6 col-md-2 actor-tile">
+        <div class="thumbnail">
+          <%= link_to (image_tag actor.photo.url(:thumb), class: 'image', alt: actor.name+" "+actor.second_name, title: actor.name+" "+actor.second_name), actor%>
+        </div>
+        <div class="row actor-prev-data">
+          <div class="name col-7" title="<%= actor.name %>">
+            <%= actor.name %>
+          </div>
+          <div class="second_name col-7" title="<%= actor.second_name %>">
+            <%= actor.second_name %>
+          </div>
+          <div class="third_name col-7" title="<%= actor.third_name %>">
+            <%= actor.third_name %>
+          </div>
+        </div>
+        <hr/>
+    </div>
+  <% end %>
+</div>

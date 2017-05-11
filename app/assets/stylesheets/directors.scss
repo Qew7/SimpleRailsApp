@@ -1,31 +1,31 @@
-// Place all the styles related to the movies controller here.
+// Place all the styles related to the Actors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.title {
+.name {
 	font-size: 8pt;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.duration {
-	font-size: 8pt;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.rating {
+.second_name {
 	font-size: 8pt;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-.poster-frame {
+.third_name {
+	font-size: 8pt;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.photo-frame {
 	position: absolute;
 }
-.poster-big {
+.photo-big {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -33,11 +33,7 @@
 	/*width: 250px;*/
 }
 
-.poster-prev-img {
+.photo-prev-img {
 	height: 400px;
-}
-
-.movie-description {
-	text-align: justify;
 }
 

@@ -1,0 +1,12 @@
+<div class="row">
+  <% @genres.each do |genre| %>
+    <div class="col-sm-6 col-md-2 genre-tile">
+        <div class="row genre-prev-data">
+          <div class="name col-7" title="<%= genre.name %>">
+            <%= genre.name %>
+          </div>
+        </div>
+        <hr/>
+    </div>
+  <% end %>
+</div>

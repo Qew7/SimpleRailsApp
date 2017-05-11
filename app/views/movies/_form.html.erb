@@ -12,32 +12,32 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :Название, for: :movie_title%>
+    <%= form.label :title, for: :movie_title%>
     <%= form.text_field :title, id: :movie_title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Длительность, for: :movie_duration %>
+    <%= form.label :duration, for: :movie_duration %>
     <%= form.text_field :duration, id: :movie_duration, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Режисёр, for: :movie_director %>
-    <%= form.text_field :director, id: :movie_director, class: 'form-control' %>
+    <%= form.label :director, for: :movie_director %>
+    <%= form.text_field :director_id, id: :movie_director, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Рейтинг, for: :movie_rating %>
+    <%= form.label :rating, for: :movie_rating %>
     <%= form.text_field :rating, id: :movie_rating, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Описание, for: :movie_description %>
+    <%= form.label :description, for: :movie_description %>
     <%= form.text_area :description, id: :movie_description, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :Постер, for: :poster %>
+    <%= form.label :poster, for: :poster %>
     <%= form.file_field :poster, id: :poster_field%>
   </div>
 

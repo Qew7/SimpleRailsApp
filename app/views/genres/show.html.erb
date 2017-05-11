@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1><%= @genre.name %></h1>
+  </div>
+  <div class="col-md-offset-5">
+    <%= link_to 'Изменить', edit_genre_path(@genre) %> |
+    <%= link_to 'Назад', genres_path %>
+  </div>
+</div> 
+<div class="row">
+  <div class="col genre-data">
+    <p>
+      <strong>Название:</strong>
+      <%= @genre.name %>
+    </p>
+  </div>
+</div>

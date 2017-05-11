@@ -1,0 +1,36 @@
+<%= form_with(model: director, html: { multipart: true }) do |form| %>
+  <% if director.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(director.errors.count, "error") %> попрепятствовало сохранению фильма:</h2>
+
+      <ul>
+      <% director.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, for: :name%>
+    <%= form.text_field :name, id: :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :second_name, for: :second_name %>
+    <%= form.text_field :second_name, id: :second_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :third_name, for: :third_name %>
+    <%= form.text_field :third_name, id: :third_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :photo, for: :photo %>
+    <%= form.file_field :photo, id: :photo_field%>
+  </div>
+
+  <%= form.submit class: "btn btn-info"%>
+
+<% end %>

@@ -5,4 +5,7 @@ class Movie < ApplicationRecord
   has_many :genres, through: :movies_genres
   has_many :actors, through: :actor_movies
   has_one :director
+
+  validates :title, presence: true
+  validates :director, presence: true
 end

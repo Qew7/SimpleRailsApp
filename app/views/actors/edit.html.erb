@@ -1,0 +1,13 @@
+<h1>Редактирование актёра</h1>
+
+<div class="row">
+	<div class="col-md-4">
+		<%= render 'form', actor: @actor %>
+	</div>
+	<div class="col" id="photo-prev">
+		<%= image_tag @actor.photo.url(:medium), class: "photo-big"%>
+	</div>
+</div>
+<%= link_to 'Инфо', @actor %> |
+<%= link_to 'Назад', actors_path %> |
+<%= link_to 'Удалить', @actor, method: :delete, data: { confirm: 'Вы уверены?' } %>

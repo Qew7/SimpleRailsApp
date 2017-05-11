@@ -1,0 +1,13 @@
+<h1>Редактирование режиссёра</h1>
+
+<div class="row">
+	<div class="col-md-4">
+		<%= render 'form', director: @director %>
+	</div>
+	<div class="col" id="photo-prev">
+		<%= image_tag @director.photo.url(:medium), class: "photo-big"%>
+	</div>
+</div>
+<%= link_to 'Инфо', @director %> |
+<%= link_to 'Назад', directors_path %> |
+<%= link_to 'Удалить', @director, method: :delete, data: { confirm: 'Вы уверены?' } %>

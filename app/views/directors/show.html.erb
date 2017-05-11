@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1><%= @director.name+" "+@director.second_name %></h1>
+  </div>
+  <div class="col-md-offset-5">
+    <%= link_to 'Изменить', edit_director_path(@director) %> |
+    <%= link_to 'Назад', directors_path %>
+  </div>
+</div> 
+<div class="row">
+  <div class="col-md-4 photo-frame">
+    <%= image_tag @director.photo.url(:medium), class: "photo-big"%>
+  </div>
+  <div class="col director-data">
+    <p>
+      <strong>Имя:</strong>
+      <%= @director.name %>
+    </p>
+    <p>
+      <strong>Фамилия:</strong>
+      <%= @director.second_name %>
+    </p>
+    <p>
+      <strong>Отчество:</strong>
+      <%= @director.third_name %>
+    </p>
+  </div>
+</div>
