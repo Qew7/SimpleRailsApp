@@ -15,6 +15,13 @@ ActiveRecord::Schema.define(version: 20170511174836) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "actor_movies", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.bigint "actor_id"
+    t.index ["actor_id"], name: "index_actor_movies_on_actor_id"
+    t.index ["movie_id"], name: "index_actor_movies_on_movie_id"
+  end
+
   create_table "actors", force: :cascade do |t|
     t.string "name"
     t.string "second_name"
@@ -35,13 +42,6 @@ ActiveRecord::Schema.define(version: 20170511174836) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "movie_actors", force: :cascade do |t|
-    t.bigint "movie_id"
-    t.bigint "actor_id"
-    t.index ["actor_id"], name: "index_movie_actors_on_actor_id"
-    t.index ["movie_id"], name: "index_movie_actors_on_movie_id"
   end
 
   create_table "movie_genres", force: :cascade do |t|
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20170511174836) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "movie_actors", "actors"
-  add_foreign_key "movie_actors", "movies"
+  add_foreign_key "actor_movies", "actors"
+  add_foreign_key "actor_movies", "movies"
   add_foreign_key "movie_genres", "genres"
   add_foreign_key "movie_genres", "movies"
   add_foreign_key "movies", "directors"
