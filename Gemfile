@@ -43,6 +43,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem "rubocop-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
