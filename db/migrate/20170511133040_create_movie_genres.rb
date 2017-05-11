@@ -4,4 +4,3 @@ class CreateMovieGenres < ActiveRecord::Migration[5.1]
     end
   end
 end
-

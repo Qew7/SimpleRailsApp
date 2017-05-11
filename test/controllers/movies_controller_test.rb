@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class MoviesControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,7 +16,7 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create movie" do
-    assert_difference('Movie.count') do
+    assert_difference("Movie.count") do
       post movies_url, params: { movie: { description: @movie.description, director: @movie.director, duration: @movie.duration, rating: @movie.rating, title: @movie.title } }
     end
 
@@ -39,7 +39,7 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy movie" do
-    assert_difference('Movie.count', -1) do
+    assert_difference("Movie.count", -1) do
       delete movie_url(@movie)
     end
 
