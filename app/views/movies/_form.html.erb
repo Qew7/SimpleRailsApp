@@ -23,7 +23,25 @@
 
   <div class="form-group">
     <%= form.label :director, for: :movie_director %>
-    <%= form.text_field :director_id, id: :movie_director, class: 'form-control' %>
+    <br/>
+    <%= form.select :director_id, Director.all.collect {|director| [director.name + " " + director.second_name, director.id]  }, {}, {class: "directors" } %>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :genres, for: :movie_genre %>
+        <br/>
+        <%= form.select :genre_ids, Genre.all.collect {|genre| @movie.genre_ids.include?(genre.id) ? nil : [genre.name, genre.id]  }, {}, {multiple: true, class: "actors" } %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :actors, for: :movie_actor %>
+        <br/>
+        <%= form.select :actors_ids, Actor.all.collect {|actor| @movie.actor_ids.include?(actor.id) ? nil : [actor.name+" "+actor.second_name, actor.id]  }, {}, {multiple: true, class: "genres" } %>
+      </div>
+    </div>
   </div>
 
   <div class="form-group">
