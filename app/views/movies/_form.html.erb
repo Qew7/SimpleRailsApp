@@ -1,10 +1,10 @@
 <%= form_with(model: movie, html: { multipart: true }) do |form| %>
-  <% if movie.errors.any? %>
+  <% if @movie.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(movie.errors.count, "error") %> попрепятствовало сохранению фильма:</h2>
 
       <ul>
-      <% movie.errors.full_messages.each do |message| %>
+      <% @movie.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,14 +22,14 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :director, for: :movie_director %>
+    <%= form.label :director_id, for: :movie_director_id %>
     <br/>
     <%= form.select :director_id, Director.all.collect {|director| [director.name + " " + director.second_name, director.id]  }, {}, {class: "directors" } %>
   </div>
   <div class="row">
     <div class="col">
       <div class="form-group">
-        <%= form.label :genres, for: :movie_genre %>
+        <%= form.label :genre_ids, for: :movie_genre_ids %>
         <br/>
         <%= form.select :genre_ids, Genre.all.collect {|genre| @movie.genre_ids.include?(genre.id) ? nil : [genre.name, genre.id]  }, {}, {multiple: true, class: "actors" } %>
       </div>
@@ -37,9 +37,9 @@
 
     <div class="col">
       <div class="form-group">
-        <%= form.label :actors, for: :movie_actor %>
+        <%= form.label :actor_ids, for: :movie_actor_ids %>
         <br/>
-        <%= form.select :actors_ids, Actor.all.collect {|actor| @movie.actor_ids.include?(actor.id) ? nil : [actor.name+" "+actor.second_name, actor.id]  }, {}, {multiple: true, class: "genres" } %>
+        <%= form.select :actor_ids, Actor.all.collect {|actor| @movie.actor_ids.include?(actor.id) ? nil : [actor.name+" "+actor.second_name, actor.id]  }, {}, {multiple: true, class: "genres" } %>
       </div>
     </div>
   </div>

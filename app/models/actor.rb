@@ -3,7 +3,7 @@ class Actor < ApplicationRecord
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 
   has_many :movies, through: :actor_movies
-  # has_and_belongs_to_many :movies
+  has_and_belongs_to_many :movies
 
   validates :name, presence: true
 end

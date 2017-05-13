@@ -25,15 +25,15 @@ class MoviesController < ApplicationController
   # POST /movies.json
   def create
     @movie = Movie.new(movie_params)
-    # @movie.director_id  << Director.find(params[:movie][:director_id])
-    # @movie.actor_ids << actor_ids
-    # @movie.genre_ids << genre_ids
 
     respond_to do |format|
       if @movie.save
         format.html { redirect_to @movie, notice: "Фильм был успешно создан." }
         format.json { render :show, status: :created, location: @movie }
       else
+        @movie.errors.any? ? Rails.logger.info(@movie.errors.inspect) : nil
+        p ''
+        p @movies
         format.html { render :new }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
@@ -72,6 +72,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :duration, :director, :genres, :actors, :rating, :description, :poster)
+      params.require(:movie).permit(:title, :duration, :director_id, :genre_ids, :actor_ids, :rating, :description, :poster)
     end
 end
