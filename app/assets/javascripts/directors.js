@@ -12,7 +12,7 @@ $(document.addEventListener("turbolinks:load", function() {
       var img = new Image(267, 400);
       console.log(file);
       img.src = file.target.result;
-      $('#photo-prev').empty().html(img);
+      $('#director-photo-prev').empty().html(img);
       $('img').addClass("photo-big");
     }
     reader.readAsDataURL(image);

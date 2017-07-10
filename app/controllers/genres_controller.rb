@@ -28,7 +28,7 @@ class GenresController < ApplicationController
 
     respond_to do |format|
       if @genre.save
-        format.html { redirect_to @genre, notice: "Жанр был успешно добавлен." }
+        format.html { redirect_to @genre, notice: "Жано был успешно создан." }
         format.json { render :show, status: :created, location: @genre }
       else
         format.html { render :new }

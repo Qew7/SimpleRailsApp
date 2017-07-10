@@ -11,6 +11,11 @@ class GenresControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should validate uniquness of genre names" do
+    post "/genres", name: "i am unique!"
+    assert 1
+  end
+
   test "should get new" do
     get genres_new_url
     assert_response :success

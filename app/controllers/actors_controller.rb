@@ -24,6 +24,7 @@ class ActorsController < ApplicationController
   # POST /actors
   # POST /actors.json
   def create
+    binding.pry
     @actor = Actor.new(actor_params)
 
     respond_to do |format|
