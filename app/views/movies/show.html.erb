@@ -1,3 +1,7 @@
+<% content_for :styles do %>
+  <%= stylesheet_link_tag 'movies' %>
+<% end %>
+
 <div class="row">
   <div class="col-md-6">
     <h1><%= @movie.title %></h1>
@@ -8,8 +12,8 @@
   </div>
 </div> 
 <div class="row">
-  <div class="col-md-4 poster-frame">
-    <%= image_tag @movie.poster.url(:medium), class: "poster-big"%>
+  <div class="col-md-4 image-frame">
+    <%= image_tag @movie.poster.url(:medium), class: "image-big"%>
   </div>
   <div class="col movie-data">
     <p>

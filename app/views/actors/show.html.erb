@@ -1,3 +1,7 @@
+<% content_for :styles do %>
+  <%= stylesheet_link_tag 'actors' %>
+<% end %>
+
 <div class="row">
   <div class="col-md-6">
     <h1><%= @actor.name+" "+@actor.second_name %></h1>
@@ -8,8 +12,8 @@
   </div>
 </div> 
 <div class="row">
-  <div class="col-md-4 photo-frame">
-    <%= image_tag @actor.photo.url(:medium), class: "photo-big"%>
+  <div class="col-md-4 image-frame">
+    <%= image_tag @actor.photo.url(:medium), class: "image-big"%>
   </div>
   <div class="col actor-data">
     <p>

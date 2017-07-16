@@ -1,3 +1,7 @@
+<% content_for :styles do %>
+  <%= stylesheet_link_tag 'directors' %>
+<% end %>
+
 <% content_for :javascripts do %>
   <%= javascript_include_tag 'photo_preview' %>
 <% end %>
@@ -5,7 +9,7 @@
 <%= form_with(model: director, html: { multipart: true }) do |form| %>
   <% if director.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(director.errors.count, "error") %> попрепятствовало сохранению фильма:</h2>
+      <h2><%= pluralize(director.errors.count, "error") %> попрепятствовало сохранению режиссёра:</h2>
 
       <ul>
       <% director.errors.full_messages.each do |message| %>

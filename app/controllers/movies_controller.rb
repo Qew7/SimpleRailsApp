@@ -24,7 +24,6 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    binding.pry
     @movie = Movie.new(movie_params)
     respond_to do |format|
       if @movie.save

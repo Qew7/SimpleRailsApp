@@ -4,8 +4,8 @@
 	<div class="col-md-4">
 		<%= render 'form', actor: @actor %>
 	</div>
-	<div class="col" id="photo-prev">
-		<%= image_tag @actor.photo.url(:medium), class: "photo-big"%>
+	<div class="col" id="image-prev">
+		<%= image_tag @actor.photo.url(:medium), class: "image-big"%>
 	</div>
 </div>
 <%= link_to 'Инфо', @actor %> |

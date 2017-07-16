@@ -1,11 +1,15 @@
-<% content_for :javascripts %>
-  <%= javascript_include_tag 'photo_preview' do %>
+<% content_for :styles do %>
+  <%= stylesheet_link_tag 'actors' %>
+<% end %>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'photo_preview' %>
 <% end %>
 
 <%= form_with(model: actor, html: { multipart: true }) do |form| %>
   <% if actor.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(actor.errors.count, "error") %> попрепятствовало сохранению фильма:</h2>
+      <h2><%= pluralize(actor.errors.count, "error") %> попрепятствовало сохранению актёра:</h2>
 
       <ul>
       <% actor.errors.full_messages.each do |message| %>
