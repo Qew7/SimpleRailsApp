@@ -26,7 +26,6 @@ class MoviesController < ApplicationController
   def create
     binding.pry
     @movie = Movie.new(movie_params)
-    # @movie.director_id = Director.where(id: params['movie']['director_id']).first
     respond_to do |format|
       if @movie.save
         format.html { redirect_to @movie, notice: "Фильм был успешно создан." }

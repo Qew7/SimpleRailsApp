@@ -1,3 +1,7 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'photo_preview' %>
+<% end %>
+
 <%= form_with(model: director, html: { multipart: true }) do |form| %>
   <% if director.errors.any? %>
     <div id="error_explanation">
@@ -28,7 +32,7 @@
 
   <div class="form-group">
     <%= form.label :photo, for: :photo %>
-    <%= form.file_field :photo, id: :photo_field%>
+    <%= form.file_field :photo, id: :image_field %>
   </div>
 
   <%= form.submit class: "btn btn-info"%>

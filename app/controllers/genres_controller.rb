@@ -24,11 +24,12 @@ class GenresController < ApplicationController
   # POST /genres
   # POST /genres.json
   def create
+    # binding.pry
     @genre = Genre.new(genre_params)
-
+    
     respond_to do |format|
       if @genre.save
-        format.html { redirect_to @genre, notice: "Жано был успешно создан." }
+        format.html { redirect_to @genre, notice: "Жанр был успешно создан." }
         format.json { render :show, status: :created, location: @genre }
       else
         format.html { render :new }
